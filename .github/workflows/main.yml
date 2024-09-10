@@ -29,12 +29,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
-      - name: Rename artifact
-        run: mv target/ysoserial-${{ github.ref_name }}-all.jar target/ysoserial-all.jar
+      # - name: Rename artifact
+      #   run: mv target/ysoserial-${{ github.ref_name }}-all.jar target/ysoserial-all.jar
 
       - name: Publish GitHub release
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         with:
-          files: target/ysoserial-all.jar
+          files: target/ysoserial-${{ github.ref_name }}-all.jar
