@@ -37,4 +37,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         with:
-          files: target/ysoserial-${{ github.ref_name }}-all.jar
+          files: /home/runner/work/asdfads/asdfads/target/ysoserial-${{ github.ref_name }}-all.jar
